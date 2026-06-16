@@ -1,0 +1,47 @@
+# Sessiz - Kurulum ve Kullanım Kılavuzu
+
+Bu araç, videoları yetki hatası almadan en yüksek kalitede indirmenizi sağlar.
+
+## 1. Gerekli Araçların Kurulumu
+
+### Windows İçin:
+1. Terminale (PowerShell) şu komutları yazın:
+   ```powershell
+   winget install ffmpeg
+   pip install -r requirements.txt
+   ```
+kontrol etmek için Terminalde şu komutu yazın:
+
+ffmpeg -version
+
+### macOS İçin:
+1. Terminale şu komutları yazın:
+   ```bash
+   brew install ffmpeg
+   pip install -r requirements.txt
+   ```
+
+kontrol etmek için Terminalde şu komutu yazın:
+
+ffmpeg -version
+---
+
+## 2. Çalıştırma Adımları
+
+1. **Programı Başlatın:** Terminalde proje klasöründeyken şu komutu çalıştırın:
+   `python sessiz.py`
+   *(Ekranda "Eklentiden video bekleniyor" yazısını görmelisiniz.)*
+veya 
+sessiz.pyw üzerine çift tıklayarak da çalıştırabilirsiniz. (python launcher yüklüyse)
+
+2. **Eklentiyi Chrome'a Yükleyin:**
+   - Chrome'da `chrome://extensions/` sayfasını açın.
+   - Sağ üstten **Geliştirici Modu**'nu açın.
+   - **Paketlenmemiş öğe yükle** butonuna basıp projedeki `sessiz_extension` klasörünü seçin.
+
+3. **İndirmeye Başlayın:**
+   - Tarayıcıda bir video açıp oynatın.
+   - Video linki otomatik olarak masaüstü programına iletilecek ve indirme başlayacaktır.
+
+---
+*Not: İndirilen videolar otomatik olarak birleştirilip MP4 formatında kaydedilir. İndirme bitince, inen video ismini değiştirin veya başka yere taşıyın. Aynı isimde zannedip indirmeyebiliyor.
